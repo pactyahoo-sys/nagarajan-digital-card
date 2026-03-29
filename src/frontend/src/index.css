@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "PlusJakartaSans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 300 700;
+}
+
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url("/assets/fonts/PlayfairDisplay.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 400 800;
+}
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    /* Deep navy dark theme */
+    --background: 0.13 0.022 250;
+    --foreground: 0.92 0.005 260;
+    --card: 0.15 0.028 252;
+    --card-foreground: 0.92 0.005 260;
+    --popover: 0.18 0.025 250;
+    --popover-foreground: 0.92 0.005 260;
+    --primary: 0.73 0.1 72;
+    --primary-foreground: 0.13 0.022 250;
+    --secondary: 0.2 0.025 252;
+    --secondary-foreground: 0.92 0.005 260;
+    --muted: 0.2 0.02 252;
+    --muted-foreground: 0.68 0.008 260;
+    --accent: 0.73 0.1 72;
+    --accent-foreground: 0.13 0.022 250;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.73 0.1 72;
+    --input: 0.22 0.025 252;
+    --ring: 0.73 0.1 72;
+    --gold: 0.73 0.1 72;
+    --gold-dim: 0.6 0.08 72;
+    --navy: 0.13 0.022 250;
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.15 0.028 252;
+    --sidebar-foreground: 0.92 0.005 260;
+    --sidebar-primary: 0.73 0.1 72;
+    --sidebar-primary-foreground: 0.13 0.022 250;
+    --sidebar-accent: 0.2 0.025 252;
+    --sidebar-accent-foreground: 0.92 0.005 260;
+    --sidebar-border: 0.73 0.1 72 / 30%;
+    --sidebar-ring: 0.73 0.1 72;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "PlusJakartaSans", system-ui, sans-serif;
+    background: radial-gradient(
+      ellipse 80% 60% at 50% 30%,
+      oklch(0.22 0.04 240),
+      oklch(0.1 0.02 250)
+    );
+    min-height: 100vh;
+  }
+}
